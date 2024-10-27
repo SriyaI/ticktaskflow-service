@@ -1,8 +1,13 @@
 // src/index.js
-import express from 'express';
+const express=require('express');
 
 const app = express();
-app.get('/', (req, res) => res.send('Hello from Vite with Node.js!'));
-
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
